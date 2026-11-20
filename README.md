@@ -87,3 +87,13 @@ Konfiguration af extensions, IVR, indgående routing og SIP-trunk
 - Asterisk sender opkald til udbyderen, som viderestiller til Danmarks mobilnet. Opkald fra mobilnettet modtages af udbyderen og sendes til Asterisk.
 
 Trunk-oplysninger (viptel.dk eller anden udbyder): username ___, password ___, server/host ___, registrering på/af ___.
+
+---
+
+## Arbejdsgang
+
+1. Ret filerne i repoet
+2. Commit og push
+3. På Pi'en: `cd ~/fastnet && git pull && sudo ./sync.sh`
+4. Genindlæs Asterisk: `./reload-dialplan.sh`
+
