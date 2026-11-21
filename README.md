@@ -97,3 +97,9 @@ Trunk-oplysninger (viptel.dk eller anden udbyder): username ___, password ___, s
 3. På Pi'en: `cd ~/fastnet && git pull && sudo ./sync.sh`
 4. Genindlæs Asterisk: `./reload-dialplan.sh`
 
+### ATA 190 standard kodeord
+
+Admin mode: `admin:admin`
+User mode: `cisco:cisco`
+
+IVR voice prompt: `24726`
