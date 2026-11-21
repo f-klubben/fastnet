@@ -215,8 +215,8 @@
         <callSequence>0</callSequence>
         <muteProgressTone>0</muteProgressTone>
         <ringtonespecs>
-            <ringtoneSpec index="1">0</ringtoneSpec>
-            <ringtoneSpec index="2">20</ringtoneSpec>
+            <ringtoneSpec index="1">1</ringtoneSpec>
+            <ringtoneSpec index="2">25</ringtoneSpec>
             <ringtoneSpec index="3">85</ringtoneSpec>
         </ringtonespecs>
         <timers>
