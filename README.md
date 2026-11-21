@@ -97,9 +97,18 @@ Trunk-oplysninger (viptel.dk eller anden udbyder): username ___, password ___, s
 3. På Pi'en: `cd ~/fastnet && git pull && sudo ./sync.sh`
 4. Genindlæs Asterisk: `./reload-dialplan.sh`
 
-### ATA 190 standard kodeord
+### ATA 190
 
+Default login:
 Admin mode: `admin:admin`
 User mode: `cisco:cisco`
 
 IVR voice prompt: `24726`
+
+
+ATA190 kører CUCM, hvor SIP-felterne er readonly i admin panelet. Konfigurationen leveres derfor som en CUCM-profil over TFTP fra Raspberry Pi til ATA-modemmet.
+
+- Profil: `ata190/ATA34DBFD18F2EC.cnf.xml` (port 1, extension 190, proxy 192.168.2.1)
+- Efter factory reset, kør på Pi'en: `sudo ./provision-ata190.sh [ata-ip]`
+
+Scriptet starter en TFTP-server på 192.168.2.1, sætter TFTP-serveren i modemmet, genstarter det og venter på registrering. Modemmet registrerer sig uden password, da firmwaren ikke tager imod et SIP-password fra en unsigned TFTP-profil; derfor har endpointet `[190]` i `pjsip.conf` ingen `auth` og identificeres på extension plus fast IP.
